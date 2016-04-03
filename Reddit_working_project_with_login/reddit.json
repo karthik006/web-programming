@@ -1,170 +1,209 @@
 {
-	"reddit": [{
-		"id": 1,
-		"image_link": "https://giant.gfycat.com/ParallelLinearBlackfly.gif",
-		"likes": 5895,
-		"link_title": "VR Gaming is so Immersive You'll Want to Stick Your Head Through the Floor",
-		"main_link": "https://gfycat.com/ParallelLinearBlackfly",
-		"post_time": "Fri Jan 01 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
-		"post": "submitted"
-	}, {
-		"id": 2,
-		"image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-		"likes": 6802,
-		"link_title": "Justice Department: States Should Not Jail Poor People Over Fine Nonpayment",
-		"main_link": "http://www.nbcnews.com/news/us-news/department-justice-states-should-not-jailed-over-fine-nonpayment-n537796",
-		"post_time": "Tue Jan 05 2016 09:15:00 GMT-0700 (Pacific Daylight Time)",
-		"post": "submitted"
-	}, {
-		"id": 3,
-		"image_link": "http://i.imgur.com/00U2Jzb.gif",
-		"likes": 4826,
-		"link_title": "Danny DeVito shortly before introducing Bernie as Obi-Wan yesterday.",
-		"main_link": "http://i.imgur.com/00U2Jzb.gifv",
-		"post": "submitted"
-	}, {
-		"id": 4,
-		"image_link": "https://b.thumbs.redditmedia.com/PE29ekeLkoKp4jYhEW1LF4gLmZZg22DYAr3HOpQDz6g.jpg",
-		"likes": 6216,
-		"link_title": "Anime VS Reality",
-		"main_link": "http://imgur.com/gallery/VoxHX",
-		"post": "submitted"
-	}, {
-		"id": 5,
-		"image_link": "https://b.thumbs.redditmedia.com/nRYIE-E4zvxfCopZBRQ4jZaDw65YVsEvAo4HKL-i29I.jpg",
-		"likes": 3447,
-		"link_title": "She begged and pleaded, but in the end. she had to take a Bath.",
-		"main_link": "http://i.imgur.com/E8U9xS2.jpg",
-		"post_time": "Fri Feb 05 2016 19:28:54 GMT-0700 (Pacific Daylight Time)",
-		"username": "swapnil"
-	}, {
-		"id": 6,
-		"image_link": "https://b.thumbs.redditmedia.com/wsW-a4lgCN0YR3ExynKfwNc6GMxQP4HuLXWeC8A-UJE.jpg",
-		"likes": 4906,
-		"link_title": "I had the luck to spend the last weekend in this landscape",
-		"main_link": "http://i.imgur.com/S7Q98vk.jpg",
-		"post": "submitted"
-	}, {
-		"id": 7,
-		"image_link": "https://a.thumbs.redditmedia.com/yOiJZLr-DUxxE2QQPG75mJIFCBCO87TQsZ0dajU0cg8.jpg",
-		"likes": 2795,
-		"link_title": "Mr. Burns is a good motivator.",
-		"main_link": "http://i.imgur.com/dYgkLlt.jpg",
-		"post": "submitted"
-	}, {
-		"id": 8,
-		"image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-		"likes": 3553,
-		"link_title": "Happy Pi Day everyone!",
-		"post_time": "Sat Feb 20 2016 10:09:04 GMT-0700 (Pacific Daylight Time)",
-		"main_link": "https://www.reddit.com/r/askscience/comments/4aczay/happy_pi_day_everyone/",
-		"username": "karthik"
-	}, {
-		"id": 9,
-		"image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-		"likes": 5337,
-		"link_title": "Wealth of super rich soars as the worst-off lose out, report says | UK",
-		"main_link": "http://www.independent.co.uk/news/uk/politics/budget-2016-wealth-of-super-rich-soars-as-the-worst-off-lose-out-report-says-a6929341.html",
-		"post": "submitted"
-	}, {
-		"id": 10,
-		"likes": 2139,
-		"image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-		"link_title": "PSA: Don't forget to cancel those Tidal trial memberships you signed up for to listen to Kanye's Life of Pablo album.",
-		"post_time": "Tue Mar 01 2016 16:46:51 GMT-0700 (Pacific Daylight Time)",
-		"main_link": "https://www.reddit.com/r/Music/comments/4adhlv/psa_dont_forget_to_cancel_those_tidal_trial/",
-		"username": "swapnil"
-	}, {
-		"id": 11,
-		"image_link": "https://b.thumbs.redditmedia.com/qFF3nmzga9Tn047qSnZt4VOQwSR3w3a1n87S-mNNngw.jpg",
-		"likes": 3663,
-		"link_title": "1961 Marilyn Monroe with a paddleball",
-		"post_time": "Tue Mar 08 2016 09:29:29 GMT-0700 (Pacific Daylight Time)",
-		"main_link": "http://imgur.com/iC1cQhX.gifv",
-		"username": "dexter"
-	}, {
-		"id": 12,
-		"image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-		"likes": 3635,
-		"link_title": "A man who'd just died is delivered to a local mortuary",
-		"main_link": "https://www.reddit.com/r/Jokes/comments/4acr33/a_man_whod_just_died_is_delivered_to_a_local/",
-		"post": "submitted"
-	}, {
-		"likes": 2331,
-		"link_title": "Paramount gets serious about challenging Star Trek fan film Axanar; provides 28 pages of specific copyright-infringing elements.",
-		"main_link": "http://www.avclub.com/article/paramount-lawyers-call-star-trek-fan-films-bluff-n-233718",
-		"id": 13,
-		"image_link": "https://b.thumbs.redditmedia.com/Zf-OqLz7VEo1a7q5GefzYG7oNtC1nQFkt0WcU-TnpqU.jpg",
-		"post_time": "Thu Mar 10 2016 15:16:17 GMT-0700 (Pacific Daylight Time)",
-		"username": "dexter"
-	}, {
-		"id": 14,
-		"image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-		"likes": 1493,
-		"link_title": "For daylight savings, we should move the clocks forward an hour on Monday at 9 AM so that we lose an hour of work instead of sleep.",
-		"main_link": "https://www.reddit.com/r/Showerthoughts/comments/4adkrv/for_daylight_savings_we_should_move_the_clocks/",
-		"post": "submitted"
-	}, {
-		"id": 15,
-		"image_link": "https://a.thumbs.redditmedia.com/VE4_aDt2qfkC9JfvUuEleSagX6ZkuZfDPVpO_FkjQZ4.jpg",
-		"likes": 2402,
-		"link_title": "An Israeli company creates new high-tech glasses lens called \"omnifocals,\" which have the ability to change their optical power in real time, allowing the wearer to look wherever he or she wants without limiting the field of view or compromising clarity.",
-		"main_link": "http://www.popularmechanics.com/technology/a19885/smart-glasses-focus-any-distance/",
-		"post": "submitted"
-	}, {
-		"id": 16,
-		"image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-		"likes": 4862,
-		"link_title": "What's something you're pretty sure has only happened to you?",
-		"main_link": "https://www.reddit.com/r/AskReddit/comments/4acch3/whats_something_youre_pretty_sure_has_only/",
-		"post": "submitted"
-	}, {
-		"id": 17,
-		"image_link": "image/herald.jpg",
-		"likes": 5263,
-		"link_title": "TIL over 60 percent of Chinese consumers also say that they are willing to pay more for products labeled 'Made in USA' than for those labeled 'Made in China'.",
-		"main_link": "http://www.forbes.com/sites/tjmccue/2012/11/19/made-in-america-has-a-new-ring/https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg5c933ba71b85",
-		"post": "submitted"
-	}, {
-		"id": 18,
-		"image_link": "https://b.thumbs.redditmedia.com/93SnFulnKo6ke2td0osUOZstJbkbbIts_UO6Ryhso1E.jpg",
-		"likes": 3930,
-		"link_title": "Dog responds to code word",
-		"main_link": "https://www.youtube.com/watch?v=-9JcOZlMlLY",
-		"post": "submitted"
-	}],
-	"users": [{
-		"id": 1,
-		"name": "karthik",
-		"password": "karthik",
-		"likes": [],
-		"notLikes": [
-
-		]
-	}, {
-		"id": 2,
-		"name": "dean",
-		"password": "dean",
-		"likes": [],
-		"notLikes": [
-
-		]
-
-	}, {
-		"id": 3,
-		"name": "swapnil",
-		"password": "swapnil",
-		"likes": [
-
-		],
-		"notLikes": [
-
-		]
-	}, {
-		"name": "dexter",
-		"password": "dexter",
-		"id": 4,
-		"likes": [],
-		"notLikes": []
-	}]
+  "reddit": [
+    {
+      "id": 1,
+      "image_link": "https://giant.gfycat.com/ParallelLinearBlackfly.gif",
+      "likes": 5895,
+      "link_title": "VR Gaming is so Immersive You'll Want to Stick Your Head Through the Floor",
+      "main_link": "https://gfycat.com/ParallelLinearBlackfly",
+      "post_time": "Fri Jan 01 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "dexter"
+    },
+    {
+      "id": 2,
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
+      "likes": 6802,
+      "link_title": "Justice Department: States Should Not Jail Poor People Over Fine Nonpayment",
+      "main_link": "http://www.nbcnews.com/news/us-news/department-justice-states-should-not-jailed-over-fine-nonpayment-n537796",
+      "post_time": "Tue Feb 05 2016 09:15:00 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "johnathon"
+    },
+    {
+      "id": 3,
+      "image_link": "http://i.imgur.com/00U2Jzb.gif",
+      "likes": 4826,
+      "link_title": "Danny DeVito shortly before introducing Bernie as Obi-Wan yesterday.",
+      "main_link": "http://i.imgur.com/00U2Jzb.gifv",
+      "post_time": "Fri Feb 05 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "cynthia"
+    },
+    {
+      "id": 4,
+      "image_link": "https://b.thumbs.redditmedia.com/PE29ekeLkoKp4jYhEW1LF4gLmZZg22DYAr3HOpQDz6g.jpg",
+      "likes": 6216,
+      "link_title": "Anime VS Reality",
+      "main_link": "http://imgur.com/gallery/VoxHX",
+      "post_time": "Fri Jan 01 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "katie"
+    },
+    {
+      "id": 5,
+      "image_link": "https://b.thumbs.redditmedia.com/nRYIE-E4zvxfCopZBRQ4jZaDw65YVsEvAo4HKL-i29I.jpg",
+      "likes": 3447,
+      "link_title": "She begged and pleaded, but in the end. she had to take a Bath.",
+      "main_link": "http://i.imgur.com/E8U9xS2.jpg",
+      "post_time": "Fri Feb 05 2016 19:28:54 GMT-0700 (Pacific Daylight Time)",
+      "username": "swapnil"
+    },
+    {
+      "id": 6,
+      "image_link": "https://b.thumbs.redditmedia.com/wsW-a4lgCN0YR3ExynKfwNc6GMxQP4HuLXWeC8A-UJE.jpg",
+      "likes": 4906,
+      "link_title": "I had the luck to spend the last weekend in this landscape",
+      "main_link": "http://i.imgur.com/S7Q98vk.jpg",
+      "post_time": "Fri Jan 01 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "alexis"
+    },
+    {
+      "id": 7,
+      "image_link": "https://a.thumbs.redditmedia.com/yOiJZLr-DUxxE2QQPG75mJIFCBCO87TQsZ0dajU0cg8.jpg",
+      "likes": 2795,
+      "link_title": "Mr. Burns is a good motivator.",
+      "main_link": "http://i.imgur.com/dYgkLlt.jpg",
+      "post_time": "Fri Mar 10 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "alexis"
+    },
+    {
+      "id": 8,
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
+      "likes": 3553,
+      "link_title": "Happy Pi Day everyone!",
+      "post_time": "Sat Feb 20 2016 10:09:04 GMT-0700 (Pacific Daylight Time)",
+      "main_link": "https://www.reddit.com/r/askscience/comments/4aczay/happy_pi_day_everyone/",
+      "username": "karthik"
+    },
+    {
+      "id": 9,
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
+      "likes": 5337,
+      "link_title": "Wealth of super rich soars as the worst-off lose out, report says | UK",
+      "main_link": "http://www.independent.co.uk/news/uk/politics/budget-2016-wealth-of-super-rich-soars-as-the-worst-off-lose-out-report-says-a6929341.html",
+      "post_time": "Fri Mar 10 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "karthik"
+    },
+    {
+      "id": 10,
+      "likes": 2139,
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
+      "link_title": "PSA: Don't forget to cancel those Tidal trial memberships you signed up for to listen to Kanye's Life of Pablo album.",
+      "post_time": "Tue Mar 01 2016 16:46:51 GMT-0700 (Pacific Daylight Time)",
+      "main_link": "https://www.reddit.com/r/Music/comments/4adhlv/psa_dont_forget_to_cancel_those_tidal_trial/",
+      "username": "swapnil"
+    },
+    {
+      "id": 11,
+      "image_link": "https://b.thumbs.redditmedia.com/qFF3nmzga9Tn047qSnZt4VOQwSR3w3a1n87S-mNNngw.jpg",
+      "likes": 3663,
+      "link_title": "1961 Marilyn Monroe with a paddleball",
+      "post_time": "Tue Mar 08 2016 09:29:29 GMT-0700 (Pacific Daylight Time)",
+      "main_link": "http://imgur.com/iC1cQhX.gifv",
+      "username": "dexter"
+    },
+    {
+      "id": 12,
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
+      "likes": 3635,
+      "link_title": "A man who'd just died is delivered to a local mortuary",
+      "main_link": "https://www.reddit.com/r/Jokes/comments/4acr33/a_man_whod_just_died_is_delivered_to_a_local/",
+      "post_time": "Fri Mar 10 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "alexis"
+    },
+    {
+      "likes": 2331,
+      "link_title": "Paramount gets serious about challenging Star Trek fan film Axanar; provides 28 pages of specific copyright-infringing elements.",
+      "main_link": "http://www.avclub.com/article/paramount-lawyers-call-star-trek-fan-films-bluff-n-233718",
+      "id": 13,
+      "image_link": "https://b.thumbs.redditmedia.com/Zf-OqLz7VEo1a7q5GefzYG7oNtC1nQFkt0WcU-TnpqU.jpg",
+      "post_time": "Thu Mar 10 2016 15:16:17 GMT-0700 (Pacific Daylight Time)",
+      "username": "dexter"
+    },
+    {
+      "id": 14,
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
+      "likes": 1493,
+      "link_title": "For daylight savings, we should move the clocks forward an hour on Monday at 9 AM so that we lose an hour of work instead of sleep.",
+      "main_link": "https://www.reddit.com/r/Showerthoughts/comments/4adkrv/for_daylight_savings_we_should_move_the_clocks/",
+      "post_time": "Fri Jan 10 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "alexis"
+    },
+    {
+      "id": 15,
+      "image_link": "https://a.thumbs.redditmedia.com/VE4_aDt2qfkC9JfvUuEleSagX6ZkuZfDPVpO_FkjQZ4.jpg",
+      "likes": 2402,
+      "link_title": "An Israeli company creates new high-tech glasses lens called \"omnifocals,\" which have the ability to change their optical power in real time, allowing the wearer to look wherever he or she wants without limiting the field of view or compromising clarity.",
+      "main_link": "http://www.popularmechanics.com/technology/a19885/smart-glasses-focus-any-distance/",
+      "post_time": "Fri Jan 08 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "alexis"
+    },
+    {
+      "id": 16,
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
+      "likes": 4862,
+      "link_title": "What's something you're pretty sure has only happened to you?",
+      "main_link": "https://www.reddit.com/r/AskReddit/comments/4acch3/whats_something_youre_pretty_sure_has_only/",
+      "post_time": "Fri Jan 05 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "dexter"
+    },
+    {
+      "id": 17,
+      "image_link": "image/herald.jpg",
+      "likes": 5263,
+      "link_title": "TIL over 60 percent of Chinese consumers also say that they are willing to pay more for products labeled 'Made in USA' than for those labeled 'Made in China'.",
+      "main_link": "http://www.forbes.com/sites/tjmccue/2012/11/19/made-in-america-has-a-new-ring/https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg5c933ba71b85",
+      "post_time": "Fri Jan 09 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "john"
+    },
+    {
+      "id": 18,
+      "image_link": "https://b.thumbs.redditmedia.com/93SnFulnKo6ke2td0osUOZstJbkbbIts_UO6Ryhso1E.jpg",
+      "likes": 3930,
+      "link_title": "Dog responds to code word",
+      "main_link": "https://www.youtube.com/watch?v=-9JcOZlMlLY",
+      "post_time": "Fri Jan 02 2016 05:15:09 GMT-0700 (Pacific Daylight Time)",
+      "post": "submitted",
+      "username": "natalie"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "karthik",
+      "password": "karthik",
+      "likes": [],
+      "notLikes": []
+    },
+    {
+      "id": 2,
+      "name": "dean",
+      "password": "dean",
+      "likes": [],
+      "notLikes": []
+    },
+    {
+      "id": 3,
+      "name": "swapnil",
+      "password": "swapnil",
+      "likes": [],
+      "notLikes": []
+    },
+    {
+      "name": "dexter",
+      "password": "dexter",
+      "id": 4,
+      "likes": [],
+      "notLikes": []
+    }
+  ]
 }
