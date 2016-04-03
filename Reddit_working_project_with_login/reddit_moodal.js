@@ -576,20 +576,20 @@ var main = function() {
     });
 
     function pages(totalnumofitems) {
-        var numofitems_page = 5,
+        var numofitems_page = 10,
             numofpages = Math.ceil(totalnumofitems / numofitems_page),
             pagenumbers;
         $("ul.pagination").empty();
         for (var i = 1; i <= numofpages; i++) {
-            pagenumbers = "<li class='waves-effect'>" + i + "</li>";
+            pagenumbers = "<li class='waves-effect'>"+ i + "</li>";
             $(pagenumbers).appendTo("ul.pagination");
         }
         $("div.postsContainer").children().hide();
-        $("div.postsContainer div:nth-child(-n+5)").slice(0).show();
+        $("div.postsContainer div:nth-child(-n+10)").slice(0).show();
         $("ul.pagination").on("click", "li", function() {
             var page = $(this).text(),
-                x = page * 5,
-                y = (page - 1) * 5;
+                x = page * 10,
+                y = (page - 1) * 10;
             $("li").removeClass("pages");
             $(this).addClass("pages");
             $("div.postsContainer").children().hide();
