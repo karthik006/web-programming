@@ -1,4 +1,4 @@
-{{
+{
   "reddit": [
     {
       "id": 1,
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "image_link": "#",
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
       "likes": 6803,
       "link_title": "Justice Department: States Should Not Jail Poor People Over Fine Nonpayment",
       "main_link": "http://www.nbcnews.com/news/us-news/department-justice-states-should-not-jailed-over-fine-nonpayment-n537796",
@@ -65,7 +65,7 @@
     },
     {
       "id": 8,
-      "image_link": "#",
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
       "likes": 3553,
       "link_title": "Happy Pi Day everyone!",
       "post_time": "Wed Mar 02 2016 10:09:04 GMT-0700 (Pacific Daylight Time)",
@@ -75,7 +75,7 @@
     {
       "id": 9,
       "likes": 5336,
-      "image_link": "#",
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
       "link_title": "Wealth of super rich soars as the worst-off lose out, report says | UK",
       "post_time": "Fri Jan 01 2016 20:20:20 GMT-0700 (Pacific Daylight Time)",
       "main_link": "http://www.independent.co.uk/news/uk/politics/budget-2016-wealth-of-super-rich-soars-as-the-worst-off-lose-out-report-says-a6929341.html",
@@ -84,7 +84,7 @@
     {
       "id": 10,
       "likes": 2139,
-      "image_link": "#",
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
       "link_title": "PSA: Don't forget to cancel those Tidal trial memberships you signed up for to listen to Kanye's Life of Pablo album.",
       "post_time": "Wed Jan 20 2016 16:46:51 GMT-0700 (Pacific Daylight Time)",
       "main_link": "https://www.reddit.com/r/Music/comments/4adhlv/psa_dont_forget_to_cancel_those_tidal_trial/",
@@ -102,7 +102,7 @@
     {
       "id": 12,
       "likes": 3636,
-      "image_link": "#",
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
       "link_title": "A man who'd just died is delivered to a local mortuary",
       "post_time": "Fri Feb 05 2016 21:35:34 GMT-0700 (Pacific Daylight Time)",
       "main_link": "https://www.reddit.com/r/Jokes/comments/4acr33/a_man_whod_just_died_is_delivered_to_a_local/",
@@ -119,7 +119,7 @@
     },
     {
       "id": 14,
-      "image_link": "#",
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
       "likes": 1492,
       "link_title": "For daylight savings, we should move the clocks forward an hour on Monday at 9 AM so that we lose an hour of work instead of sleep.",
       "main_link": "https://www.reddit.com/r/Showerthoughts/comments/4adkrv/for_daylight_savings_we_should_move_the_clocks/",
@@ -137,7 +137,7 @@
     },
     {
       "id": 16,
-      "image_link": "#",
+      "image_link": "https://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
       "likes": 4861,
       "link_title": "What's something you're pretty sure has only happened to you?",
       "main_link": "https://www.reddit.com/r/AskReddit/comments/4acch3/whats_something_youre_pretty_sure_has_only/",
@@ -182,7 +182,8 @@
          ],
       "notLikes": [
         
-      ]
+      ],
+	  
     },
     {
       "id": 3,
@@ -207,4 +208,3 @@
       ]
     }
   ]
-}
