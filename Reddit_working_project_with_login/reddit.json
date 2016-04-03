@@ -1,4 +1,4 @@
-{
+{{
   "reddit": [
     {
       "id": 1,
@@ -168,68 +168,42 @@
       "id": 1,
       "name": "karthik",
       "password": "karthik",
-      "upvote": [
-        {}
+      "likes": [     
       ],
-      "downvote": [
-        {}
-      ],
-      "shares": [
-        {}
-      ],
-      "saved": [
-        {}
+      "notLikes": [
+        
       ]
     },
     {
       "id": 2,
       "name": "dean",
       "password": "dean",
-      "upvote": [
-        {}
-      ],
-      "downvote": [
-        {}
-      ],
-      "shares": [
-        {}
-      ],
-      "saved": [
-        {}
+      "likes": [
+         ],
+      "notLikes": [
+        
       ]
     },
     {
       "id": 3,
       "name": "swapnil",
       "password": "swapnil",
-      "upvote": [
-        {}
+      "likes": [
+        
       ],
-      "downvote": [
-        {}
-      ],
-      "shares": [
-        {}
-      ],
-      "saved": [
-        {}
+      "notLikes": [
+        
       ]
     },
     {
       "name": "dexter",
       "password": "dexter",
       "id": 4,
-      "upvote": [
-        {}
+      "likes": [
+        
       ],
-      "downvote": [
-        {}
-      ],
-      "shares": [
-        {}
-      ],
-      "saved": [
-        {}
+      "notLikes": [
+        
       ]
     }
   ]
