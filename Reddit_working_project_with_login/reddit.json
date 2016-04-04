@@ -3,9 +3,10 @@
     {
       "id": 1,
       "image_link": "https://giant.gfycat.com/ParallelLinearBlackfly.gif",
-      "likes": 5894,
+      "likes": 5895,
       "link_title": "VR Gaming is so Immersive You'll Want to Stick Your Head Through the Floor",
       "main_link": "https://gfycat.com/ParallelLinearBlackfly",
+      "post": "submitted",
       "post_time": "Fri Mar 25 2016 18:36:45 GMT-0700 (Pacific Daylight Time)",
       "username": "dexter"
     },
@@ -175,8 +176,8 @@
       "id": 2,
       "name": "dean",
       "password": "dean",
-      "likes": "[]",
-      "notLikes": "[]"
+      "likes": "[\"\",\"1\"]",
+      "notLikes": "[\"\"]"
     },
     {
       "id": 3,

@@ -68,7 +68,10 @@ var main = function() {
                 var x, y;
                 x = sessionStorage.getItem('like');
                 y = sessionStorage.getItem('notLike');
-
+                            $("#user").text("Welcome, "+username);//adding the username to the header nav bar.
+                            $("#logoutTopNav").show();
+                            $("#loginTopNav").hide();
+							$("#signUp").hide();
 
 
                 like=x.split(',');
@@ -391,6 +394,7 @@ var main = function() {
 							$("#user").text("Welcome, "+username);//adding the username to the header nav bar.
                             $("#logoutTopNav").show();
                             $("#loginTopNav").hide();
+							$("#signUp").hide();
 
                             function showUserHistory() {
                                 //reflect the data from reddit.json file, into the html page:
