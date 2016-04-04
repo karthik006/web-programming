@@ -68,12 +68,13 @@ var main = function() {
                 var x, y;
                 x = sessionStorage.getItem('like');
                 y = sessionStorage.getItem('notLike');
+				console.log(sessionStorage);
                             $("#user").text("Welcome, "+username);//adding the username to the header nav bar.
                             $("#logoutTopNav").show();
                             $("#loginTopNav").hide();
 							$("#signUp").hide();
 
-
+console.log(x);
                 like=x.split(',');
 
 				//check if the array is empty or not--karthik
@@ -213,6 +214,7 @@ var main = function() {
                         //writting the like array to the json file.
                         var dt1 = JSON.stringify(like);
                         var dt2 = JSON.stringify(notLike);
+                            console.log("like"+like);
                         $.ajax({
                             type: "PUT",
                             url: "http://localhost:3000/users/" + user.id,
@@ -378,14 +380,14 @@ var main = function() {
                             alert("login Successful");
 							//tempObject to store initial get request value, in order to parse it later, then store in in user object.
                             var tempObject = result[0];
-							console.log(result[0]);
+							//console.log(result[0]);
                             user.id = tempObject.id;
                             user.userName = tempObject.name;
-							console.log(tempObject.likes);
+							//console.log(tempObject.likes);
                             like = JSON.parse(tempObject.likes);
                             notLike = JSON.parse(tempObject.notLikes);
-                            console.log(like);
-                            console.log(notLike);
+                            //console.log(like);
+                            //console.log(notLike);
                             sessionStorage.setItem('id', user.id);
                             sessionStorage.setItem('user', username);
                             sessionStorage.setItem('password', pwd);
@@ -398,6 +400,7 @@ var main = function() {
 
                             function showUserHistory() {
                                 //reflect the data from reddit.json file, into the html page:
+								
                                 like.forEach(function(element) {
                                     $("#" + element + ".voteUpButton").hide();
                                     $("#" + element + ".voteUpButtonDisabled").show();
@@ -427,7 +430,11 @@ var main = function() {
             } else if (pass !== confirm) {
                 alert("password not matching");
             } else {
-                var j = JSON.parse('{"name":"' + username + '","password":"' + pass + '"}');
+				var l1=[],l2=[];
+				var st1= JSON.stringify(l1);
+				var st2= JSON.stringify(l2);
+				console.log("st1"+st1);
+                var j = JSON.parse('{"name":"' + username + '","password":"' + pass + '","likes":"' +st1+ '","notLikes":"' +st2+ '"}');
                 $.ajax({
                     type: "POST",
                     data: j,
@@ -439,7 +446,19 @@ var main = function() {
                         document.getElementById("regpass").value = "";
                         document.getElementById("confirmpass").value = "";
                         $('#modal3').closeModal();
-                    },
+					$.get("http://localhost:3000/users/", function(data){
+						var length = data.length;
+						
+						    sessionStorage.setItem('id', length);
+                            sessionStorage.setItem('user', username);
+                            sessionStorage.setItem('password', pass);
+                            sessionStorage.setItem('like', like);
+                            sessionStorage.setItem('notLike', notLike);
+							location.reload(true);
+							
+					});
+				
+				},
                     failure: function(errMsg) {
                         alert(errMsg);
                     }
