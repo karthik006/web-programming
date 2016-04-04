@@ -1,21 +1,27 @@
 var main = function() {
     "use strict";
-    var i = 1,
-        totalnumofitems, jsondata;
+    	var i = 1,
+        totalnumofitems, jsondata, postsList, imgId;
     var user = {
-            id: 0,
-            userName: ""
+            "id": 0,
+            "userName": "",
+			"like" : [],
+			"notLike" : []
         },
         username, pwd, like = [],
         notLike = [];
 
     function myfunction() {
+	  $("#logoutTopNav").hide();
+      $("#loginTopNav").show();
 
         $.get("http://localhost:3000/reddit", function(getData) {
+            $("div.postsContainer").empty(); 
+			
+			 getData.forEach(function(reddit) {
 
-            getData.forEach(function(reddit) {
-
-                var imgId = reddit.id;
+			   
+				var imgId = reddit.id;
                 var postsList = "<div class ='postContent z-depth-1'>" +
                     "<div class = 'votes'>" +
                     "<img  id=" + imgId + " class='voteUpButton' src='image/up.png'>" +
@@ -34,8 +40,8 @@ var main = function() {
                     "<div id=" + reddit.id + " class='contentDivImg'></div>" + "</div>";
                 $(postsList).appendTo('div.postsContainer');
                 //$("#" + reddit.id + ".votesNum").text(reddit.likes);
-                i = i + 1;
-                if (reddit.image_link != "image/herald.jpg") {
+                
+                if (reddit.image_link != "image/noimage.jpg") {
                     // alert(reddit.id);
                     $("#" + reddit.id + ".imageDivLink").html("<i class='material-icons thumbdown'>play_circle_filled</i>");
                 }
@@ -62,37 +68,115 @@ var main = function() {
                 var x, y;
                 x = sessionStorage.getItem('like');
                 y = sessionStorage.getItem('notLike');
-                console.log(username);
-                //console.log(x);
-                //console.log(notLike);
+                
+                
 
-                var i = 0;
-                while (i <= x.length) {
-                    like.push(x[i]);
-                    i = i + 2;
-                }
-                console.log(like);
+                like=x.split(',');
+                
+				//check if the array is empty or not--karthik
                 like.forEach(function(element) {
+					if(element!=""){
                     $("#" + element + ".voteUpButton").hide();
                     $("#" + element + ".voteUpButtonDisabled").show();
-                });
+					}});
+				 
+				 console.log(y);
+                notLike=y.split(',');
+				console.log(notLike);
 
-                var i = 0;
-                while (i <= y.length) {
-                    notLike.push(y[i]);
-                    i = i + 2;
-                }
-                console.log(notLike);
+                 //check if the array is empty or not--karthik
                 notLike.forEach(function(element) {
+					if(element!=""){
                     $("#" + element + ".voteDownButton").hide();
                     $("#" + element + ".voteDownButtonDisabled").show();
-                });
-            }
+				} });
+			}	
+            
+//Newest tab click event:
+          $("ul.tabs li:nth-child(1) a").on("click",function(){
+               var newest=getData;
+               $('div.postsContainer').empty();
+               newest.forEach(function(reddit){
+                var imgId = reddit.id;
+               var postsList = "<div class ='postContent z-depth-1'>" +
+                     "<div class = 'votes'>" +
+                     "<img  id=" + imgId + " class='voteUpButton' src='image/up.png'>" +
+                     "<img  id=" + imgId + " class='voteUpButtonDisabled' src='image/upDisabled.png' style='opacity:0.4; display: none;'>" + "<br>" +
+                     "<strong id =" + reddit.id + " class='votesNum'>" + reddit.likes + "</strong>" + "<br>" +
+                     "<img  id=" + imgId + " class='voteDownButton' src='image/down.png'>" +
+                     "<img  id=" + imgId + " class='voteDownButtonDisabled' src='image/downDisabled.png' style='opacity:0.4; display: none;'>" +
+                     "</div>" + "<div class='image'>" + "<a href=" + JSON.stringify(reddit.main_link) + ">" +
+                     "<img autoplay='false' src=" + JSON.stringify(reddit.image_link) + "width='70' height='60' class='postimage'>" + "</a>" + "</div>" +
+                     "<div class='Content-List'>" +
+                     "<a href=" + JSON.stringify(reddit.main_link) + ">" +
+                     "<p class='postname'>" + reddit.link_title + "</p>" +
+                     "<div class='subtitles'>" + "<p class='username'>By " + reddit.username + "</p>" +
+                     "<p class='time'>" + timeSince(new Date(reddit.post_time)) + "</p>" +
+                     "<p class='share'> share" + "</p>" + "</div>" + "</a>" + "<div id=" + reddit.id + " class='imageDivLink' ></div>" +
+                     "<div id=" + reddit.id + " class='contentDivImg'></div>" + "</div>";
+                 $(postsList).prependTo('div.postsContainer');
+               });
+          });
 
+         //Oldest tab click event:
+          $("ul.tabs li:nth-child(2) a").on("click",function(){
+              var oldest=getData;
+              $('div.postsContainer').empty();
+               oldest.forEach(function(reddit){
+               var imgId = reddit.id;
+             var postsList = "<div class ='postContent z-depth-1'>" +
+                  "<div class = 'votes'>" +
+                  "<img  id=" + imgId + " class='voteUpButton' src='image/up.png'>" +
+                  "<img  id=" + imgId + " class='voteUpButtonDisabled' src='image/upDisabled.png' style='opacity:0.4; display: none;'>" + "<br>" +
+                  "<strong id =" + reddit.id + " class='votesNum'>" + reddit.likes + "</strong>" + "<br>" +
+                  "<img  id=" + imgId + " class='voteDownButton' src='image/down.png'>" +
+                  "<img  id=" + imgId + " class='voteDownButtonDisabled' src='image/downDisabled.png' style='opacity:0.4; display: none;'>" +
+                  "</div>" + "<div class='image'>" + "<a href=" + JSON.stringify(reddit.main_link) + ">" +
+                  "<img autoplay='false' src=" + JSON.stringify(reddit.image_link) + "width='70' height='60' class='postimage'>" + "</a>" + "</div>" +
+                  "<div class='Content-List'>" +
+                  "<a href=" + JSON.stringify(reddit.main_link) + ">" +
+                  "<p class='postname'>" + reddit.link_title + "</p>" +
+                  "<div class='subtitles'>" + "<p class='username'>By " + reddit.username + "</p>" +
+                  "<p class='time'>" + timeSince(new Date(reddit.post_time)) + "</p>" +
+                  "<p class='share'> share" + "</p>" + "</div>" + "</a>" + "<div id=" + reddit.id + " class='imageDivLink' ></div>" +
+                  "<div id=" + reddit.id + " class='contentDivImg'></div>" + "</div>";
+               $(postsList).appendTo('div.postsContainer');
+               });
+          });
+
+          //trending tab click event:
+          $("ul.tabs li:nth-child(3) a").on("click",function(){
+               var trending=getData.concat();//to get a new copy of (getData array) without affecting the original array.
+               trending.sort(function(a, b){
+                  return b.likes-a.likes;
+               });
+               $('div.postsContainer').empty();
+                trending.forEach(function(reddit){
+                var imgId = reddit.id;
+             var postsList = "<div class ='postContent z-depth-1'>" +
+                   "<div class = 'votes'>" +
+                   "<img  id=" + imgId + " class='voteUpButton' src='image/up.png'>" +
+                   "<img  id=" + imgId + " class='voteUpButtonDisabled' src='image/upDisabled.png' style='opacity:0.4; display: none;'>" + "<br>" +
+                   "<strong id =" + reddit.id + " class='votesNum'>" + reddit.likes + "</strong>" + "<br>" +
+                   "<img  id=" + imgId + " class='voteDownButton' src='image/down.png'>" +
+                   "<img  id=" + imgId + " class='voteDownButtonDisabled' src='image/downDisabled.png' style='opacity:0.4; display: none;'>" +
+                   "</div>" + "<div class='image'>" + "<a href=" + JSON.stringify(reddit.main_link) + ">" +
+                   "<img autoplay='false' src=" + JSON.stringify(reddit.image_link) + "width='70' height='60' class='postimage'>" + "</a>" + "</div>" +
+                   "<div class='Content-List'>" +
+                   "<a href=" + JSON.stringify(reddit.main_link) + ">" +
+                   "<p class='postname'>" + reddit.link_title + "</p>" +
+                   "<div class='subtitles'>" + "<p class='username'>By " + reddit.username + "</p>" +
+                   "<p class='time'>" + timeSince(new Date(reddit.post_time)) + "</p>" +
+                   "<p class='share'> share" + "</p>" + "</div>" + "</a>" + "<div id=" + reddit.id + " class='imageDivLink' ></div>" +
+                   "<div id=" + reddit.id + " class='contentDivImg'></div>" + "</div>";
+                $(postsList).appendTo('div.postsContainer');
+                });
+          });
             //Like event:
             $("img.voteUpButton").on("click", function() {
                 var $imgId = this.id,
-                    main_link, link_title, image_link, result = $("#" + this.id + ".votesNum").text();
+                    main_link, link_title,post_time,username,image_link, result = $("#" + this.id + ".votesNum").text();
+					
                 if (username) { // check if the user loged in before letting user to change the Likes status.
                     //if the like button and not like button, both are off:
                     if (!like.includes(this.id) && !notLike.includes(this.id)) {
@@ -108,7 +192,9 @@ var main = function() {
                                 "name": user.userName,
                                 "password": pwd,
                                 "likes": dt1,
-                                "notLikes": dt2
+                                "notLikes": dt2,
+								
+								
                             }
                         });
                         //hide the like button and show the blurrd like button:
@@ -132,7 +218,8 @@ var main = function() {
                                 "name": user.userName,
                                 "password": pwd,
                                 "likes": dt1,
-                                "notLikes": dt2
+                                "notLikes": dt2,
+								
                             }
                         });
                         $("#" + this.id + ".voteUpButton").hide();
@@ -158,7 +245,11 @@ var main = function() {
                             "likes": result,
                             "link_title": link_title,
                             "main_link": main_link,
-                            "post": "submitted"
+                            "post": "submitted",
+							"post_time" : post_time,
+							"username": username
+							
+							
                         }
                     });
                 } else { //check if not loged in, then it want let the user to do likes or not likes.
@@ -170,7 +261,8 @@ var main = function() {
             //Not Like event:
             $("img.voteDownButton").on("click", function() {
                 var $imgId = this.id,
-                    main_link, link_title, image_link, result = $("#" + this.id + ".votesNum").text();
+                    main_link, link_title,post_time,username, image_link, result = $("#" + this.id + ".votesNum").text();
+					
                 if (username) { // check if the user loged in before letting user to change the Likes status.
                     if (!notLike.includes(this.id) && !like.includes(this.id)) {
                         notLike.push(this.id);
@@ -195,7 +287,7 @@ var main = function() {
                         like.splice(like.indexOf(this.id), 1);
                         notLike.push(this.id);
                         var dt1 = JSON.stringify(like);
-                        var dt2 = JSON.stringify(notLike);
+						var dt2 = JSON.stringify(notLike);
                         $.ajax({
                             type: "PUT",
                             url: "http://localhost:3000/users/" + user.id,
@@ -231,31 +323,29 @@ var main = function() {
                             "likes": result,
                             "link_title": link_title,
                             "main_link": main_link,
-                            "post": "submitted"
+                            "post": "submitted",
+							"post_time" : post_time,
+							"username": username
+								
                         }
                     });
                 } else {
                     alert("OOPs! Sorry, you need to log-in first..");
                 }
             }); //end of like down event.
-            jsondata = getData;
-            totalnumofitems = getData.length;
-            pages(totalnumofitems);
+            
+            pages(getData.length);
         }); //end of $.get function
-        $(".button-collapse").sideNav();
+        
+    } //end of my function
+    $(".button-collapse").sideNav();
         $('.modal-trigger').leanModal();
         $('.tooltipped').tooltip({
             delay: 50
         });
-    } //end of my function
     function login() {
         $("#login").on("click", function() {
             //initilaizing user object to zero.
-            user.id = 0;
-            user.userName = "";
-            like = [];
-            notLike = [];
-
             username = document.getElementById("username").value;
             pwd = document.getElementById("password").value;
             //console.log(username);
@@ -271,16 +361,20 @@ var main = function() {
                     dataType: "json",
                     data: j,
                     success: function(result) {
-                        console.log(result.length);
+                      //  console.log(result.length);
                         if (result.length === 0) {
                             alert("login failed");
                         } else {
+                            $('#modal2').closeModal();    //new line
+                            $("input#username").val("");  //new line
+                            $("input#password").val("");  //new line
                             alert("login Successful");
-
-                            //tempObject to store initial get request value, in order to parse it later, then store in in user object.
+							//tempObject to store initial get request value, in order to parse it later, then store in in user object.
                             var tempObject = result[0];
+							console.log(result[0]);
                             user.id = tempObject.id;
                             user.userName = tempObject.name;
+							console.log(tempObject.likes);
                             like = JSON.parse(tempObject.likes);
                             notLike = JSON.parse(tempObject.notLikes);
                             console.log(like);
@@ -290,6 +384,9 @@ var main = function() {
                             sessionStorage.setItem('password', pwd);
                             sessionStorage.setItem('like', like);
                             sessionStorage.setItem('notLike', notLike);
+							$("#user").text("Welcome, "+username);//adding the username to the header nav bar.
+                            $("#logoutTopNav").show();
+                            $("#loginTopNav").hide();
 
                             function showUserHistory() {
                                 //reflect the data from reddit.json file, into the html page:
@@ -333,6 +430,7 @@ var main = function() {
                         document.getElementById("reguser").value = "";
                         document.getElementById("regpass").value = "";
                         document.getElementById("confirmpass").value = "";
+                        $('#modal3').closeModal();
                     },
                     failure: function(errMsg) {
                         alert(errMsg);
@@ -343,7 +441,7 @@ var main = function() {
     } /// end of login function
 
     function logout() {
-        $("#logout").on("click", function() {
+        $("#logoutTopNav").on("click", function() {
             //clearing user data befor loging out & refreshing the page.
             username = "";
             user.id = 0;
@@ -400,9 +498,7 @@ var main = function() {
                     $(this).show();
                     count++;
                 }
-
-
-            });
+             });
             if (filter === "") {
                 $('.postsContainer').empty();
                 myfunction();
@@ -439,7 +535,7 @@ var main = function() {
         return Math.floor(seconds) + " seconds ago";
     } //end of function timesince
 
-    //Start- for postform validation
+        //Start- for postform validation
 
     jQuery.validator.setDefaults({
         debug: true,
@@ -452,136 +548,193 @@ var main = function() {
                 url: true
             }
         }
-    }); // end of jquery validator
-
-    $("a.postnews").on("click", function() {
+    });
+     $("a.postnews").on("click", function() {
         var form = $("#postform");
         form.validate(); //End- post form validation
         //Start- JQuery code for post fields
+        $('#input1').val("");$("#input2").val('');
+        $("div#imageinput").replaceWith("<div class='addimage'><a class='imgurl btn waves-effect waves-light grey'>Add Image URL</a></div>");
+        $("div#videoinput").replaceWith("<div class='addvideo'><a class='videourl btn waves-effect waves-light grey'>Add Video URL</a></div> ");
+        if(username){
         $("#postbutton").click(function(element) {
 
-            var check = $("#checkbox").is(':checked');
-            if (check === true) {
-                if ($("#input1").val() === "" || $("#input2").val() === "" || $("#input3").val() === "") {
+           
+                if ($("#input1").val() === "" || $("#input2").val() == "" || $("#input3").val() == "") {
                     element.preventDefault();
                     setTimeout(fade_out, 5000);
                     $("#spanbutton").css({
                         "visibility": "visible",
                         "display": "inline"
                     }).text("Enter input");
-
-                    function fade_out() {
+                        function fade_out() {
                         $("#spanbutton").fadeOut().empty();
                     }
-                }
-                /*else if ($("#input1").val() !== "" || $("#input2").val() !== "" || $("#input3").val() !== "") {
+                } /*else if ($("#input1").val() !== "" || $("#input2").val() !== "" || $("#input3").val() !== "") {
 
-                                   jsondata.forEach(function(reddit1) {
-                                       if ((reddit1.link_title === $("#input1").val())) {
-                                           alert(JSON.stringify(reddit1.main_link)+"\\\\   "+$("#input2").val() );
-                                           console.log(reddit1.main_link);
-                                           element.preventDefault();
-                                           setTimeout(fade_out2, 5000);
-                                           $("#spanbutton").css({
-                                       "visibility": "visible",
-                                       "display": "inline"
-                                       }).text("Post Title already exists in the site");
+                    jsondata.forEach(function(reddit1) {
+                        if ((reddit1.link_title === $("#input1").val())) {
+                            alert(JSON.stringify(reddit1.main_link)+"\\\\   "+$("#input2").val() );
+                            console.log(reddit1.main_link);
+                            element.preventDefault();
+                            setTimeout(fade_out2, 5000);
+                            $("#spanbutton").css({
+                        "visibility": "visible",
+                        "display": "inline"
+                        }).text("Post Title already exists in the site");
 
-                                           function fade_out2() {
-                                       $("#spanbutton").fadeOut().empty();
-                                       $("#postform")[0].reset();
-                                           }
-                                       }
-                                       else if(JSON.stringify(reddit1.main_link) === $("#input2").val()){
-                                           alert("in second if");
-                                           element.preventDefault();
-                                           setTimeout(fade_out4, 5000);
-                                           $("#spanbutton").css({
-                                       "visibility": "visible",
-                                       "display": "inline"
-                                   }).text("URL already exists in the site");
-                                           
-                                           function fade_out4() {
-                                       $("#spanbutton").fadeOut().empty();
-                                       $("#postform")[0].reset();
-                                           }
-                                       }
-                                       else if($("#input3").val()!=="undefined"){
-                                           if(JSON.stringify(reddit1.image_link) === $("#input3").val()){
-                                           alert($("#input3").val());
-                                           element.preventDefault();
-                                           setTimeout(fade_out3, 5000);
-                                           $("#spanbutton").css({
-                                       "visibility": "visible",
-                                       "display": "inline"
-                                   }).text("Image/Video URL already exists in the site");
-                                           function fade_out3() {
-                                       $("#spanbutton").fadeOut().empty();
-                                       $("#postform")[0].reset();
-                                           }
-                                       }
-                                       }
+                            function fade_out2() {
+                        $("#spanbutton").fadeOut().empty();
+                        $("#postform")[0].reset();
+                            }
+                        }
+                        else if(JSON.stringify(reddit1.main_link) === $("#input2").val()){
+                            alert("in second if");
+                            element.preventDefault();
+                            setTimeout(fade_out4, 5000);
+                            $("#spanbutton").css({
+                        "visibility": "visible",
+                        "display": "inline"
+                    }).text("URL already exists in the site");
+                            
+                            function fade_out4() {
+                        $("#spanbutton").fadeOut().empty();
+                        $("#postform")[0].reset();
+                            }
+                        }
+                        else if($("#input3").val()!==undefined){
+                            if(JSON.stringify(reddit1.image_link) === $("#input3").val()){
+                            alert($("#input3").val());
+                            element.preventDefault();
+                            setTimeout(fade_out3, 5000);
+                            $("#spanbutton").css({
+                        "visibility": "visible",
+                        "display": "inline"
+                    }).text("Image/Video URL already exists in the site");
+                            function fade_out3() {
+                        $("#spanbutton").fadeOut().empty();
+                        $("#postform")[0].reset();
+                            }
+                        }
+                        }
 
-                                   });
-                                  
-                             } */
-                else {
-                    if (form.valid() === true) {
-                        alert("in form valid");
+                    });
+                   
+              } */
+              else
+              {
+                if (form.valid() === true) {
                         var date = new Date();
                         $("#spanbutton").css({
                             "visibility": "visible"
                         }).text("");
-                        if ($("#input3").val() === "undefined") {
+                        if (($("#input3").val() === undefined)&&($("#input4").val() === undefined)) {
+                            alert("posting only 2 fields");
                             $.post("http://localhost:3000/reddit", {
                                 "link_title": $("#input1").val(),
                                 "main_link": $("#input2").val(),
-                                "image_link": "image/herald.jpg",
+                                "image_link": "image/noimage.jpg",
                                 "likes": 0,
                                 "post_time": date
                             }, function() {
                                 myfunction();
 
                             });
-                        } else {
+                        } else if(($("#input3").val() !== undefined)&&($("#input4").val() === undefined)) {
+                            var image=$("#input3").val(),
+                                regex="([^\s]+(\.(?i)(jpg|png|gif|bmp|jpeg|tif|tiff))$)";
+                            if(image.match(regex)){
+                                alert("matched")
+                              alert("posting value from image fields");
                             $.post("http://localhost:3000/reddit", {
                                 "link_title": $("#input1").val(),
                                 "main_link": $("#input2").val(),
                                 "image_link": $("#input3").val(),
+                                "image":1,
+                                "video":0,
+                                "likes": 0,
+                                "post_time": date
+                            }, function() {
+                                myfunction();
+                            });
+                            $('#modal1').closeModal();
+
+                                }else{
+                                 alert("not matched");
+                                 element.preventDefault();
+                                setTimeout(fade_out2, 5000);
+
+                                function fade_out2() {
+                                $("#spanbutton").fadeOut().empty();
+                                }
+                                $("#spanbutton").css({
+                                "visibility": "visible",
+                                "display": "inline"}).text("Accepts only gif/.png/.jpeg/.jpg/.tif/.tiff/.bmp image formats");
+                            }
+                        }
+                        else{
+                            var videourl=$("#input4").val();
+                            alert(videourl);
+                            if ((videourl.match('https?://(www.)?youtube|youtu\.be'))||(videourl.match('https?://(player.)?vimeo\.com'))||(videourl.match("^https?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+\.(?:gifv)$"))) {
+                                alert("posting value from video fields");
+                            $.post("http://localhost:3000/reddit", {
+                                "link_title": $("#input1").val(),
+                                "main_link": $("#input2").val(),
+                                "image_link": $("#input4").val(),
+                                "image":0,
+                                "video":1,
                                 "likes": 0,
                                 "post_time": date
                             }, function() {
                                 myfunction();
 
                             });
+                            $('#modal1').closeModal();
+                            $("div#imageinput").replaceWith("<div class='addimage'><a class='imgurl btn waves-effect waves-light grey'>Add Image URL</a></div>");
+                            $("div#videoinput").replaceWith("<div class='addvideo'><a class='videourl btn waves-effect waves-light grey'>Add Video URL</a></div> ");
+                        }else{
+                            alert("not matched");
+                                 element.preventDefault();
+                                setTimeout(fade_out3, 5000);
+
+                                function fade_out3() {
+                                $("#spanbutton").fadeOut().empty();
+                                }
+                                $("#spanbutton").css({
+                                "visibility": "visible",
+                                "display": "inline"}).text("Accepts Video URL's only from youtube/vimeo/.gifv formats");
+                            }
+                        }
                         }
                     }
-                }
-            } else {
-                element.preventDefault();
-                setTimeout(fade_out1, 5000);
-
-                function fade_out1() {
-                    $("#spanbutton").fadeOut().empty();
-                }
-                $("#spanbutton").css({
-                    "visibility": "visible",
-                    "display": "inline"
-                }).text("Log in to post");
-            }
         });
-    }); // end of post news function
-    $("div.addimage").on("click", function() {
-        $("div.addimage").replaceWith("<div id='imageinput'><label id='imageurl' for='input3'>Enter image URL...</label><input class='input-field validate tooltipped' data-position='right' data-delay='50' data-tooltip='We only accept video urls from Youtube/Vimeo/imgur.com' name='input3' type='url' id='input3'></div>");
+        }else {
+                //element.preventDefault();
+               
+                 $('#modal2').openModal();
+                  $('#modal1').closeModal();
+            }
     });
+        //End-code for post fields
+
+    $("div").on("click",".addimage" , function() {
+        $("div#videoinput").replaceWith("<div class='addvideo'><a class='videourl btn waves-effect waves-light grey'>Add Video URL</a></div> ");
+        $("div.addimage").replaceWith("<div id='imageinput'><input class='input-field validate' placeholder='Image URL' name='input3' type='url' id='input3'></div>");
+    });
+    $("div").on("click",".addvideo",function(){
+        $("div#imageinput").replaceWith("<div class='addimage'><a class='imgurl btn waves-effect waves-light grey'>Add Image URL</a></div>");
+        $("div.addvideo").replaceWith("<div id='videoinput'><input class='input-field validate' placeholder='Video URL' name='input4' type='url' id='input4'></div>");
+    });
+
 
     function pages(totalnumofitems) {
         var numofitems_page = 10,
             numofpages = Math.ceil(totalnumofitems / numofitems_page),
             pagenumbers;
-        $("ul.pagination").empty();
+        //  $("div.postsContainer").children().hide();
+            $("ul.pagination").empty();
         for (var i = 1; i <= numofpages; i++) {
-            pagenumbers = "<li class='waves-effect'>"+ i + "</li>";
+            pagenumbers = "<li class='waves-effect'>" + i + "</li>";
             $(pagenumbers).appendTo("ul.pagination");
         }
         $("div.postsContainer").children().hide();
@@ -595,8 +748,7 @@ var main = function() {
             $("div.postsContainer").children().hide();
             $("div.postsContainer div.postContent").slice(y, x).show();
         });
-    }
-    //End of Pagination
+    }    //End of Pagination
 
     search();
     login();

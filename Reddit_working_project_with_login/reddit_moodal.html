@@ -33,9 +33,11 @@
                             <a href="#!" class="brand-logo">Mini Reddit</a></div>
                         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="right hide-on-med-and-down">
-                            <li><a class="modal-trigger" href="#modal2">Log In</a></li>
+                            <li><a id="loginTopNav" class="modal-trigger" href="#modal2">Log In</a></li>
+                            <li><a id="logoutTopNav">Log Out</a></li>
                              <li><a class="modal-trigger" href="#modal3">Sign Up</a></li>
                             <li><a class="postnews modal-trigger" href="#modal1">Post News</a></li>
+							<li> <span id="user"></span></li>
                             <li class="search">
                                 <form id="SearchForm">
                                     <div class="search-wrapper">
@@ -58,12 +60,17 @@
         <main class="mainContainer">
 
             <div class="pagelayout">
-                <div class="center tabs">
-                    <a href=""><span class="active">Newest</span></a><a href=""><span>Oldest</span></a>
-                    <a href=""><span>Trending</span></a><br>
+              <div class="row">
+                  <div class="col s12">
+                     <ul class="tabs">
+                         <li class="tab col s3"><a  href="#newest">Newest</a></li>
+                         <li class="tab col s3"><a class="active" href="#oldest">Oldest</a></li>
+                         <li class="tab col s3"><a href="#oldest">Trending</a></li>
+                        <!-- <li class="tab col s3 disabled"><a href="#test3">Disabled Tab</a></li> -->
 
-                    <div class="divider line"></div> <br>
-                </div>
+                     </ul>
+                  </div>
+              </div>
 
                 <!-- Modal Structure -->
 				          <div id="modal2" class="modal">
