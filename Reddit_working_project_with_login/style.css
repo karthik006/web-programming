@@ -1,6 +1,6 @@
 * {
     margin: 0;
-	padding:0;
+    padding:0;
 }
 
 html, body {
@@ -13,6 +13,12 @@ html, body {
     width:100%;
 }
 
+.row:after {
+	
+	display:none;
+	
+}
+
 body {
    display: flex;
    min-height: 100vh;
@@ -21,7 +27,7 @@ body {
 
 header{
     height: 4em;
-    background-color: lightcoral;
+    background: linear-gradient(#56bae8,#c1dae6);
 }
 
 .wrapper{
@@ -39,8 +45,12 @@ float :right;
 .search{
   padding-left: 15px;
 }
+.tabs {
+	overflow-x: hidden;
+	
+}
 #search{
-    padding-left: 10px;
+   
     color: white;
     font-color:black;
 }
@@ -52,12 +62,12 @@ height: 4em;
 }
 .username{
     color: darkgrey;
-    font-size:10px;
+    font-size:12px;
     min-width: 7em;
 }
 .time{
     color: darkgrey;
-    font-size:10px;
+    font-size:12px;
     min-width: 7em;
 }
 .share{
@@ -72,12 +82,12 @@ height: 4em;
 }
 .pagetitle{
     display: inline;
-	    padding: 3em;
+        padding: 3em;
 }
 .pagetitle img{
     border-radius: 41px;
     width:50px;
-	margin: 5px;
+    margin: 5px;
 }
 .title{
     height:58px;
@@ -120,8 +130,8 @@ main{
     line-height: 30px;
     border-radius: 196px;
     text-align: center;
-	font-size: large;
-	margin: 1.5%;
+    font-size: large;
+    margin: 1.5%;
     margin-left: 2%
 }
 div.tabs{
@@ -150,10 +160,10 @@ margin:3em -16em;
     padding-top:6em;
 }
 .postname{
-    font-size: 18px;
+    font-size: 17px;
     color:midnightblue;
     margin:1em 0em 0em 0em;
-	font-family: initial;
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 .posting-area{
     width: auto;
@@ -162,7 +172,7 @@ margin:3em -16em;
 .modal{
     position: fixed;
     left: 40%;
-	right:50%;
+    right:50%;
     background-color: #fafafa;
     padding: 0;
     max-height: 100%;
@@ -184,51 +194,58 @@ div#modal1.modal{
     visibility: visible;
 }
 .votes{
-	float: left;
+    float: left;
     margin-right: 1em;
     margin-left: 0em;
     overflow: hidden;
     border-radius:4px;
-	margin-top: 1%;
-	}
+    margin-top: 1%;
+    }
     .votesNum{
         color: chocolate;
         font-size: 15px;
     }
     .image{
         width:200px;
+		padding-top: 15px;
  }
  i{
     cursor:pointer ;
  }
- .thumbup{
-    font-size:13px;
-    color:darkgrey;
+ .play{
+    font-size:15px;
+    color:lightgrey;
  }
- .thumbdown{
-  font-size:13px;
-    color:darkgrey;
+ nav{
+	 background: linear-gradient(#56bae8,#c1dae6);
  }
- 	.postimage{
+ 
+ .pause{
+  font-size:15px;
+    color:lightgrey;
+ }
+    .postimage{
     display: table-cell;
     text-align:left;
     vertical-align: top;
     border-radius: 1em;
     margin-top: 6px;
+     width:70px;
+     height:60px;
     }
-	.Content-List {
+    .Content-List {
     overflow: hidden;
     margin-left: 9em;
     margin-top: -5em;
     opacity: 1;
-	padding: 0em 1em;
+    padding: 0em 1em;
 }
 #numbering{
     margin-top: 27px;
 }
 .postContent
 {
-	margin: 1em 1em 0em;
+    margin: 1em 1em 0em;
     padding: 0em 1em;
     float: left;
     width:45em;
@@ -251,10 +268,14 @@ div#modal1.modal{
 }
 .pagination{
     width: 40em;
-	margin-right: 2%;
-	padding-left: 54px;
+    margin-right: 2%;
+    padding-left: 54px;
 }
 
+footer.page-footer{
+   
+   background-color:lightblue;
+}
 
 footer {
  position:relative;

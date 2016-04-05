@@ -35,13 +35,13 @@
                         <ul class="right hide-on-med-and-down">
                             <li><a id="loginTopNav" class="modal-trigger" href="#modal2">Log In</a></li>
                             <li><a id="logoutTopNav">Log Out</a></li>
-                             <li><a id = "signUp" class="modal-trigger" href="#modal3">Sign Up</a></li>
+                             <li><a class="modal-trigger" href="#modal3">Sign Up</a></li>
                             <li><a class="postnews modal-trigger" href="#modal1">Post News</a></li>
-							<li> <span id="user"></span></li>
+                            <li> <span id="user"></span></li>
                             <li class="search">
                                 <form id="SearchForm">
                                     <div class="search-wrapper">
-                                        <input id="search" type="text" placeholder="Search..." autocomplete="off">
+                                        <input id="search" type="text" placeholder="Search" autocomplete="off">
 
                                     </div>
                                 </form>
@@ -49,7 +49,7 @@
                         </ul>
                         <ul class="side-nav" id="mobile-demo">
                            <li><a class="modal-trigger" href="#modal2">Log In</a></li>
-                           <li><a  class="modal-trigger" href="#modal3">Sign Up</a></li>
+                           <li><a class="modal-trigger" href="#modal3">Sign Up</a></li>
                             <li><a class="postnews modal-trigger" href="#modal1">Post News</a></li>
                             </ul>
                     </div>
@@ -63,17 +63,17 @@
               <div class="row">
                   <div class="col s12">
                      <ul class="tabs">
-                         <li class="tab col s3"><a  href="#newest">Newest</a></li>
-                         <li class="tab col s3"><a class="active" href="#oldest">Oldest</a></li>
-                         <li class="tab col s3"><a href="#oldest">Trending</a></li>
-                        <!-- <li class="tab col s3 disabled"><a href="#test3">Disabled Tab</a></li> -->
-
+                         <li class="tab col s2"><a  href="#newest">Newest</a></li>
+                         <li class="tab col s2"><a class="active" href="#oldest">Oldest</a></li>
+                         <li class="tab col s2"><a href="#oldest">Trending</a></li>
+						 <li id = "mySavedPosts" class="tab col s2"><a href ="#myposts">My posts</a></li>
+                       
                      </ul>
                   </div>
-              </div>
+				                </div>
 
                 <!-- Modal Structure -->
-				          <div id="modal2" class="modal">
+                          <div id="modal2" class="modal">
                             <div class="la modal-content">
                            
                            <legend>Login:</legend><br><br>
@@ -112,49 +112,56 @@
              
                  <!--Modal signup structure end-->
  
-                 <!-- Modal Structure for posts -->
-               <div id="modal1" class="modal">
-                    <div class="posting-area">
+                 
+                <!-- Modal Structure for posts -->
+                <div id="modal1" class="modal">
+                   
+                    <div class="posting-area ">
+                       
                         <form id="postform">
                             <div class="modal-content">
 
-                                <input type="checkbox" name="checkbox" id="checkbox">
                                 <span>POST</span><br>
                                 <div id="textinput" >
-                                    <label id="posttitle" for="input1" data-error="">Post Title..</label>
-                                    <input class="input-field validate" type="text" name="input1" id="input1">
+                                    
+                                    <input class="input-field validate" placeholder="Post Title" type="text" name="input1" id="input1">
                                 </div><br>
                                 <div id="urlinput">
-                                    <label id="mainurl" for="input2" >Enter URL...</label>
-                                    <input class='input-field validate' name="input2" type="url" id="input2">
+                                    <input class='input-field validate' placeholder="URL" name="input2" type="url" id="input2">
                                 </div><br>
                                 <div class="addimage">
-                                    <a class="btn waves-effect waves-light grey">Add Image or Video URL</a>
+                                    <a class="imgurl btn waves-effect waves-light grey">Add Image URL</a>
+                                </div><br>
+                                <div class="addvideo">
+                                    <a class="videourl btn waves-effect waves-light grey">Add Video URL</a>
                                 </div>
                             </div>
 
                             <div class="modal-footer">
-                                <a id="postbutton" class="waves-effect waves-light btn" type="submit">Post</a>
+                                
+                                <button id="postbutton" class="waves-effect waves-light btn" type="submit">Post</button>
                                 <span id="spanbutton"></span>
                             </div>
                         </form>
+                    
                     </div>
+                
                 </div>
-
+                <!--Modal post structure end-->
 
                 <div class="postsContainer">
                 </div>
                 
                 
             </div>
-			<!-- An empty div which will be populated using jQuery for pagination -->
-			<div id='page_navigation'>
+            <!-- An empty div which will be populated using jQuery for pagination -->
+            <div id='page_navigation'>
                     <ul class="pagination">
 
                     </ul>
                 </div>
         </main>
-		
+        
         <!--footer-->
         <footer id = "footer" class=" page-footer">
                <div class="footer-copyright">
@@ -166,7 +173,7 @@
         </footer>
     </div>
     <script src="https://code.getmdl.io/1.1.2/material.min.js"></script>
-    <script src="reddit_moodal.js"></script>
+    <script src="sample.js"></script>
 
 </body>
 
